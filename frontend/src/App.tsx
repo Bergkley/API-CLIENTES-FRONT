@@ -48,7 +48,7 @@ export default function App() {
             className="cursor-pointer w-full p-2 bg-green-500 rounded font-medium"
           />
 
-          <section className="flex flex-col">
+          <section className="flex flex-col gap-4">
             {customers.map((customer) => (
               <article key={customer.id} className="w-full bg-white rounded p-2 mt-5 relative hover:scale-105 duration-200">
                 <p>
