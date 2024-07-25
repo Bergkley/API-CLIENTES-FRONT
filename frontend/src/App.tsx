@@ -12,7 +12,8 @@ export  default function App() {
             className="w-full mb-5 p-2 rounded"
              />
 
-          
+          <label className="font-medium text-white">Email:</label>
+           
           </form>
         </main>
     </div>
