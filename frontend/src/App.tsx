@@ -13,6 +13,7 @@ interface CustomerProps {
 export default function App() {
   const [customers, setCustomers] = useState<CustomerProps[]>([]);
   const nameRef = useRef<HTMLInputElement | null>(null)
+  const emailRef = useRef<HTMLInputElement | null>(null)
 
 
   useEffect(() => {
@@ -43,6 +44,7 @@ export default function App() {
             type="email"
             placeholder="Digite seu nome email ..."
             className="w-full mb-5 p-2 rounded"
+            ref={emailRef}
           />
 
           <input
