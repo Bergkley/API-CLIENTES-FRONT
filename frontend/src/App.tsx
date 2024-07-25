@@ -1,4 +1,4 @@
-import { useEffect, useState,useRef } from "react";
+import { useEffect, useState,useRef, FormEvent } from "react";
 import { FiTrash } from "react-icons/fi";
 import { api } from "./services/api";
 
@@ -25,12 +25,14 @@ export default function App() {
 
     setCustomers(response.data);
   }
+
+ 
   return (
     <div className="w-full min-h-screen bg-gray-900 flex justify-center px-4">
       <main className="my-10 w-full md:max-w-2xl">
         <h1 className="text-4xl font-medium text-white">Clientes</h1>
 
-        <form className="flex flex-col my-6 ">
+        <form className="flex flex-col my-6 " >
           <label className="font-medium text-white">Nome:</label>
           <input
             type="text"
