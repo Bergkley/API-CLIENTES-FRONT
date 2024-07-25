@@ -13,7 +13,20 @@ export  default function App() {
              />
 
           <label className="font-medium text-white">Email:</label>
-           
+            <input 
+            type="email"
+            placeholder="Digite seu nome email ..."
+            className="w-full mb-5 p-2 rounded"
+             />
+
+             <input 
+             type="submit"
+             value="Cadastrar"
+             className="cursor-pointer w-full p-2 bg-green-500 rounded font-medium"              
+              />
+
+
+             
           </form>
         </main>
     </div>
