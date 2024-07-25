@@ -4,7 +4,10 @@ import { api } from "./services/api";
 
 export default function App() {
   
- 
+  useEffect(() => {
+    loadCustomer();
+  },[]);
+
   async function loadCustomer(){
     const response = await api.get("/customers")
     console.log(response.data)
