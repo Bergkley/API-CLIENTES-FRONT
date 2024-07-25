@@ -81,7 +81,7 @@ export default function App() {
                   <span className="font-medium">Status:</span> {customer.status ? 'Ativo' : 'Inativo'}
                 </p>
 
-                <button className="bg-red-500 w-7 h-7 flex items-center justify-center rounded-lg absolute right-0 -top-2">
+                <button className="bg-red-500 w-7 h-7 flex items-center justify-center rounded-lg absolute right-0 -top-2" onClick={() => handleDelete(customer?.id)}>
                   <FiTrash size={18} color="#fff" />
                 </button>
               </article>
