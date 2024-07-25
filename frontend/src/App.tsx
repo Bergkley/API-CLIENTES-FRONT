@@ -3,7 +3,7 @@ import { FiTrash } from "react-icons/fi";
 import { api } from "./services/api";
 
 export default function App() {
-  
+  const [customers,setCustomers]= useState([]);
   useEffect(() => {
     loadCustomer();
   },[]);
