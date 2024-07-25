@@ -29,8 +29,16 @@ export default function App() {
   async function handleSubmit (event: FormEvent) {
       event.preventDefault();
       if(!nameRef.current?.value || !emailRef.current?.value) return;
-
+      const response = await api.post("/customer",{
+        name: nameRef.current?.value,
+        email: emailRef.current?.value
+      })    
       
+      setCustomers(allCustomers => [...allCustomers, response.data]);
+  }
+
+  async function handleDelete(id:string) {
+    
   }
   return (
     <div className="w-full min-h-screen bg-gray-900 flex justify-center px-4">
