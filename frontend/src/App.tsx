@@ -12,6 +12,8 @@ interface CustomerProps {
 
 export default function App() {
   const [customers, setCustomers] = useState<CustomerProps[]>([]);
+  const nameRef = useRef<HTMLInputElement | null>(null)
+
 
   useEffect(() => {
     loadCustomer();
@@ -33,6 +35,7 @@ export default function App() {
             type="text"
             placeholder="Digite seu nome completo ..."
             className="w-full mb-5 p-2 rounded"
+            ref={nameRef}
           />
 
           <label className="font-medium text-white">Email:</label>
