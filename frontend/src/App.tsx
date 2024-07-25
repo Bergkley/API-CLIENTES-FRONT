@@ -32,7 +32,9 @@ export default function App() {
       const response = await api.post("/customer",{
         name: nameRef.current?.value,
         email: emailRef.current?.value
-      })    
+      })
+
+      alert('Cliente criado com sucesso!')
       
       setCustomers(allCustomers => [...allCustomers, response.data]);
 
