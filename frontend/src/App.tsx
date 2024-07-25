@@ -26,7 +26,19 @@ export  default function App() {
               />
 
 
-             
+              <section className="flex flex-col">
+
+                <article 
+                className="w-full bg-white rounded p-2 mt-2"
+                >
+                  <p><span className="font-medium">Nome:</span> Berg</p>
+                  <p><span className="font-medium">Email:</span> bergkley@gmail.com</p>
+                  <p><span className="font-medium">Status:</span> ativo</p>
+
+                  
+                </article>
+
+              </section>
           </form>
         </main>
     </div>
