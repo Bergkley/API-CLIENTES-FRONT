@@ -38,7 +38,18 @@ export default function App() {
   }
 
   async function handleDelete(id:string) {
-    
+    try{
+      await api.delete(`/customer`,{
+        params:{
+          id:id,
+        }
+      })
+
+      const allCustomers = customers.filter(customer => customer.id !== id)
+      
+    }catch(error){
+      console.log(error)
+    }
   }
   return (
     <div className="w-full min-h-screen bg-gray-900 flex justify-center px-4">
