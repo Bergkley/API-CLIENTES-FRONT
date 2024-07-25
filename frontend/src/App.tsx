@@ -4,7 +4,16 @@ export  default function App() {
         <main className="my-10 w-full md:max-w-2xl">
           <h1 className="text-4xl font-medium text-white">Clientes</h1>
 
+          <form className="flex flex-col my-6 ">
+            <label className="font-medium text-white">Nome:</label>
+            <input 
+            type="text"
+            placeholder="Digite seu nome completo ..."
+            className="w-full mb-5 p-2 rounded"
+             />
+
           
+          </form>
         </main>
     </div>
   )
