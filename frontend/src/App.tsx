@@ -31,12 +31,18 @@ export  default function App() {
               <section className="flex flex-col">
 
                 <article 
-                className="w-full bg-white rounded p-2 mt-2"
+                className="w-full bg-white rounded p-2 mt-5 relative hover:scale-105 duration-200"
                 >
                   <p><span className="font-medium">Nome:</span> Berg</p>
                   <p><span className="font-medium">Email:</span> bergkley@gmail.com</p>
                   <p><span className="font-medium">Status:</span> ativo</p>
 
+                  <button className='bg-red-500 w-7 h-7 flex items-center justify-center rounded-lg absolute right-0 -top-2'>
+                    <FiTrash 
+                    size={18}
+                    color="#fff"
+                    />
+                  </button>
                   
                 </article>
 
