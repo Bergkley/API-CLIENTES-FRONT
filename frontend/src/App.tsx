@@ -4,13 +4,15 @@ import { api } from "./services/api";
 
 export default function App() {
   const [customers,setCustomers]= useState([]);
+
   useEffect(() => {
     loadCustomer();
   },[]);
 
   async function loadCustomer(){
     const response = await api.get("/customers")
-    console.log(response.data)
+
+    setCustomers(response.data)
   }
   return (
     <div className="w-full min-h-screen bg-gray-900 flex justify-center px-4">
