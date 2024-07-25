@@ -26,9 +26,11 @@ export default function App() {
     setCustomers(response.data);
   }
 
-  function handleSubmit (event: FormEvent) {
+  async function handleSubmit (event: FormEvent) {
       event.preventDefault();
       if(!nameRef.current?.value || !emailRef.current?.value) return;
+
+      
   }
   return (
     <div className="w-full min-h-screen bg-gray-900 flex justify-center px-4">
