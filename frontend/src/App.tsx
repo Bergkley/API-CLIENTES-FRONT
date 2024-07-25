@@ -2,8 +2,16 @@ import { useEffect, useState } from "react";
 import { FiTrash } from "react-icons/fi";
 import { api } from "./services/api";
 
+interface CustomerProps {
+  id:string;
+  name:string;
+  email:string;
+  status:boolean;
+  created_at:string
+}
+
 export default function App() {
-  const [customers,setCustomers]= useState([]);
+  const [customers,setCustomers]= useState<CustomerProps[]>([]);
 
   useEffect(() => {
     loadCustomer();
