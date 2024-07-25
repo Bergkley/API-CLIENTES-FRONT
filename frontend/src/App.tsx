@@ -3,6 +3,12 @@ import { FiTrash } from "react-icons/fi";
 import { api } from "./services/api";
 
 export default function App() {
+  
+ 
+  async function loadCustomer(){
+    const response = await api.get("/customers")
+    console.log(response.data)
+  }
   return (
     <div className="w-full min-h-screen bg-gray-900 flex justify-center px-4">
       <main className="my-10 w-full md:max-w-2xl">
